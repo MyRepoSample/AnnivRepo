@@ -33,7 +33,7 @@ body {
 .text {
   position: absolute;
   margin-bottom: 470px;
-  font-size: 50px;
+  font-size: 3.5vw;
   color: #cedfe0;
   font-family:'Courier New', Courier, monospace;
   animation: fadeIn 10s;
