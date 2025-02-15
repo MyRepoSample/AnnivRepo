@@ -1,0 +1,94 @@
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #F7CFD8; 
+  z-index: -1;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10rem;
+  position: relative;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 2rem;
+  color: rgb(24, 23, 23);
+}
+
+.button {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#button1{
+  background-color: rgb(221, 9, 9);
+  color: white;
+  transition: transform 0.3s ease; /* Smooth movement */
+}
+
+.button2{
+  background-color: rgb(66, 201, 39);
+  color: white;
+}
+
+
+.heart {
+  color: rgb(238, 133, 154);
+  position: fixed;
+  font-size: 2.5rem; 
+  display: inline-block;
+  animation: spreadHearts 2s infinite;
+  z-index: -1;
+}
+
+.heart::after {
+  content: '';
+  position: absolute;
+  top: 50%;         /* Position at the vertical center */
+  left: 50%;        /* Position at the horizontal center */
+  width: 20%;       /* Adjust circle size relative to heart */
+  height: 20%;      /* Adjust circle size relative to heart */
+  background-color: rgb(247, 178, 192);
+  border-radius: 80%;  /* Makes it a circle */
+  transform: translate(80%, -85%) rotate(20deg);  /* Center the circle exactly within the heart */
+} 
+
+@keyframes spreadHearts {
+  0% {
+    opacity: 0;
+    transform:  scale(1);
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  50% {
+    transform:  scale(0.8);
+  }
+  75% {
+    transform:  scale(1.1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
